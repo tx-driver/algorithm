@@ -2,7 +2,7 @@ from collections import deque
 
 def make_binarytree(depth):
 	tree = []
-	for i in range(1, 2**(depth+1)-2, 2):
+	for i in range(1, 2**depth-2, 2):
 		tree.append([i, i+1])
 	return tree
 
@@ -90,11 +90,11 @@ class DFS():
 					if parent == prev[-1]:
 						prev.pop()
 						print(prev.pop(), '', end='')
-		print(prev[-2], '', end='')
+		if len(prev): print(prev[0], end='')
 		print()
 
 if __name__ == '__main__':
-	depth = 2
+	depth = 3
 	dfs = DFS(make_binarytree(depth))
 	print(dfs.tree)
 	dfs.preorder_wi_recursive(0)
