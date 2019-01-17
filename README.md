@@ -8,4 +8,4 @@
 
 ## union-find
 * Union-Find
-* グラフ探索実装予定
+* Table探索実装
